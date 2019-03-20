@@ -11,7 +11,7 @@
 
   dyn() {
     local temp=$(mktemp)
-    curl -f $1 > $temp
+    curl -fs $1 > $temp
     . $temp
     rm $temp
   }
