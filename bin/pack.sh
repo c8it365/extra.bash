@@ -1,7 +1,7 @@
-{
-  PACKAGE='foo'
-  VERSION='1.0.0'
+#!/bin/sh
 
+{
+  PACKAGE=$(basename $0 .sh)
   CWD=$(cd $(dirname $0); pwd)
   PACKAGE_LIB=${CWD}/../lib/${PACKAGE}
 
@@ -9,3 +9,5 @@
     . ${PACKAGE_LIB}/${1}.sh
   }
 }
+
+import main
