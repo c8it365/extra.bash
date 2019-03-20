@@ -8,6 +8,13 @@
   import() {
     . ${PACKAGE_LIB}/${1}.sh
   }
+
+  dyn() {
+    local temp=$(mktemp)
+    curl -f $1 > $temp
+    . $temp
+    rm $temp
+  }
 }
 
 import main
