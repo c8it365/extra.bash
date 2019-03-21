@@ -17,4 +17,5 @@
   }
 }
 
+ARGS=$@
 import main
